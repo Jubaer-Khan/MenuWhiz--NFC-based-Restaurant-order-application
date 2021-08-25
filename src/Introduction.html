@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Introduction </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/docs.css" rel="stylesheet">
+
+  <!---Print stylesheel--->
+  <link href="css/print.css" rel="stylesheet" media="print">
+
+</head>
+
+<body>
+
+  <div class='k-page'>
+
+    <div class="k-nav" id="nav-menu">
+      <a href='../SRS.html'><img src='images/Logo.jpg' class='logo-small' /></a>
+
+      <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+
+
+        <a class="nav-link" href="page1.html" role="tab" aria-selected="">Software Requirements Specification</a>
+
+
+        <a class="nav-link active current reference internal" href="#Introduction" role="tab"
+          aria-selected="">Introduction</a>
+
+        <a class="nav-sublink reference internal" href="#Purpose">Purpose</a>
+        <a class="nav-sublink reference internal" href="#Document-Conventions">Document Conventions</a>
+        <a class="nav-sublink reference internal" href="#Intended-Audience">Intended Audience and Reading
+          Suggestions</a>
+        <a class="nav-sublink reference internal" href="#Product-scope">Product Scope</a>
+       
+
+
+        <a class="nav-link" href="Overall_description.html" role="tab" aria-selected="">Overall Description</a>
+
+
+        <a class="nav-link" href="External_Interface_Requirements.html" role="tab" aria-selected="">External Interface
+          Requirements</a>
+
+
+        <a class="nav-link" href="System_Features.html" role="tab" aria-selected="">System Features</a>
+
+
+        <a class="nav-link" href="Other_Nonfunctional_Requirements.html" role="tab" aria-selected="">Other Nonfunctional
+          Requirements</a>
+
+
+        <a class="nav-link" href="Other_Requirements.html" role="tab" aria-selected="">Other Requirements</a>
+
+
+        <a class="nav-link" href="Appendix_A.html" role="tab" aria-selected="">Appendix A: Glossary</a>
+
+
+        <a class="nav-link" href="Appendix_B.html" role="tab" aria-selected="">Appendix B: Analysis Models</a>
+
+
+        <a class="nav-link" href="Appendix_C.html" role="tab" aria-selected="">Appendix C: To Be Determined List</a>
+      </div>
+
+    </div>
+
+    <div class='k-main'>
+
+      <div class='k-main-top'>
+        <script>
+          function displayDropdownMenu() {
+            e = document.getElementById("nav-menu");
+            if (e.style.display == "block") {
+              e.style.display = "none";
+            }
+            else {
+              e.style.display = "block";
+              document.getElementById("dropdown-nav").style.display = "block";
+            }
+          }
+
+          function resetMobileUI() {
+            if (window.innerWidth <= 840) {
+              document.getElementById("nav-menu").style.display = "none";
+              document.getElementById("dropdown-nav").style.display = "block";
+            }
+            else {
+              document.getElementById("nav-menu").style.display = "block";
+              document.getElementById("dropdown-nav").style.display = "none";
+            }
+          }
+
+          window.onresize = resetMobileUI;
+        </script>
+        <div id='dropdown-nav' onclick="displayDropdownMenu();">
+          <svg viewBox="-20 -20 120 120" width="60" height="60">
+            <rect width="100" height="20"></rect>
+            <rect y="30" width="100" height="20"></rect>
+            <rect y="60" width="100" height="20"></rect>
+          </svg>
+        </div>
+
+      </div>
+      <div id='fixedbutton'><a class="headerlink btn btn-block btn-lg btn-primary" href='#Introduction'> Back to
+        top </a></div>
+      <div class='k-main-inner'>
+        <div class='divHeader'><i>Software Requirements Specification for MenuWhiz</i> </div>
+        <div class='k-location-slug'>
+          <h1 id="Introduction"><a class="headerlink" href="#Introduction">Introduction</a></h1>
+        
+        </div>
+        <div class='k-content'>
+          <h2 id="Purpose"><a class="headerlink" href="#Purpose">1.1 Purpose</a></h2>
+          <p> The purpose of this Software Requirements Specification (SRS) is to define and describe the functions and
+            specifications of our project MenuWhiz. This SRS illustrates, in clear terms, the system’s primary uses and
+            required functionality so that the next developers can easily understand what we did and how to change
+            anything if it is required.</p>
+          <br>
+		  <br>
+          <h2 id="Document-Conventions"> <a class="headerlink" href="#Document-Conventions">1.2 Document Conventions</a>
+          </h2>
+          Main Section Titles (Heading 1)
+          <li>Font: Calibri </li>
+          <li>Face: Bold </li>
+          <li>Size: 18 </li>
+
+          <br>Sub Section Titles (Heading 2)
+          <li>Font: Calibri </li>
+          <li>Face: Bold </li>
+          <li>Size: 14 </li>
+
+          <br>Heading 3
+          <li>Font: Calibri </li>
+          <li>Face: Bold </li>
+          <li>Size: 13 </li>
+
+          <br>Heading 4
+          <li>Font: Calibri </li>
+          <li>Face: Bold </li>
+          <li>Size: 12 </li>
+
+          <br>Paragraph text Explanations
+          <li>Font: Calibri </li>
+          <li>Face: Normal </li>
+          <li>Size: 12 </li>
+
+          <br>
+
+			<br>
+          <h2 id="Intended-Audience"> <a class="headerlink" href="#Intended-Audience">1.3 Intended Audience and Reading
+              Suggestions</a></h2>
+          <p>The SRS is intended for software developers, designers, project managers and testers. The document should
+            be read sequentially as it is given in the navigation bar, one tab after another.</p>
+          <br>
+
+
+          <h2 id="Product-scope"> <a class="headerlink" href="#Product-scope">1.4 Product Scope</a></h2>
+          <p> MenuWhiz is an online application designed to make dining in restaurants convenient and easy. The users of
+            this application will be of two types: the customers and the restaurants. Customers will be able to use the
+            mobile application whereas Restaurants will use the web interface.</p>
+          <p> When a customer walks into a restaurant, he will be able to get the menu of that shop in our app just by
+            placing his/her phone in front of an NFC tag. On seeing the menu, the customer will be able to place his
+            order directly through the app. In the current version of our app, we will limit the payment scope to cash
+            only. However, we hope to implement payment by card or bkash at later stages/versions. We also hope to
+            implement a rating system in the future which will let customers see reviews about the shop’s menu and make
+            an informed decision. </p>
+          <p> A restaurant will be able to sign up for our platform using the web interface. After registration, he/she
+            will have to take the unique identification number of the NFC tag and add it to his account. He can then
+            update his menu to his account, which he can modify anytime he wishes to depending on available items/stock.
+            This will allow customers to see exactly what is available in the restaurant at a given time, removing the
+            hassle of menu items not being in stock. When an order is placed, the restaurant will have to confirm the
+            order upon payment, after which their stock will be updated. </p>
+          <p> The goal of this app is to make the dine-in system convenient for customers. It will let customers see the
+            menu of a shop even before taking a seat, which is quite useful considering the number of shops available
+            with various menus. Customers can see instantly see what’s available, which is also quite helpful. </p>
+          <br>
+
+
+         
+
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

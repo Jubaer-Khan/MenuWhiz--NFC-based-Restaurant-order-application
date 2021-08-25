@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title> Overall Description </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/docs.css" rel="stylesheet">
+
+  <!---Print stylesheel--->
+  <link href="css/print.css" rel="stylesheet" media="print">
+
+</head>
+
+<body>
+
+  <div class='k-page'>
+
+    <div class="k-nav" id="nav-menu">
+      <a href='../SRS.html'><img src='images/Logo.jpg' class='logo-small' /></a>
+
+      <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+
+
+        <a class="nav-link" href="page1.html" role="tab" aria-selected="">Software Requirements Specification</a>
+
+
+        <a class="nav-link" href="Introduction.html" role="tab" aria-selected="">Introduction</a>
+
+
+        <a class="nav-link active" href="#Overall-Description" role="tab" aria-selected="">Overall Description</a>
+        <a class="nav-sublink reference internal" href="#Product-Perspective">Product Perspective</a>
+        <a class="nav-sublink reference internal" href="#Product-Functions">Product Functions</a>
+        <a class="nav-sublink reference internal" href="#User-Classes-Characteristics">User Classes and
+          Characteristics</a>
+        <a class="nav-sublink reference internal" href="#Operating-Environment">Operating Environment</a>
+        <a class="nav-sublink reference internal" href="#Design-Implementation-Constraints">Design and Implementation
+          Constraints</a>
+        <a class="reference internal nav-sublink " href="#User-Documentation">User Documentation</a>
+        <a class="reference internal nav-sublink " href="#Assumptions-Dependencies">Assumptions and Dependencies</a>
+
+
+
+        <a class="nav-link" href="External_Interface_Requirements.html" role="tab" aria-selected="">External Interface
+          Requirements</a>
+
+
+        <a class="nav-link" href="System_Features.html" role="tab" aria-selected="">System Features</a>
+
+
+        <a class="nav-link" href="Other_Nonfunctional_Requirements.html" role="tab" aria-selected="">Other Nonfunctional
+          Requirements</a>
+
+
+        <a class="nav-link" href="Other_Requirements.html" role="tab" aria-selected="">Other Requirements</a>
+
+
+        <a class="nav-link" href="Appendix_A.html" role="tab" aria-selected="">Appendix A: Glossary</a>
+
+
+        <a class="nav-link" href="Appendix_B.html" role="tab" aria-selected="">Appendix B: Analysis Models</a>
+
+
+        <a class="nav-link" href="Appendix_C.html" role="tab" aria-selected="">Appendix C: To Be Determined List</a>
+      </div>
+
+    </div>
+
+    <div class='k-main'>
+
+      <div class='k-main-top'>
+        <script>
+          function displayDropdownMenu() {
+            e = document.getElementById("nav-menu");
+            if (e.style.display == "block") {
+              e.style.display = "none";
+            }
+            else {
+              e.style.display = "block";
+              document.getElementById("dropdown-nav").style.display = "block";
+            }
+          }
+
+          function resetMobileUI() {
+            if (window.innerWidth <= 840) {
+              document.getElementById("nav-menu").style.display = "none";
+              document.getElementById("dropdown-nav").style.display = "block";
+            }
+            else {
+              document.getElementById("nav-menu").style.display = "block";
+              document.getElementById("dropdown-nav").style.display = "none";
+            }
+          }
+
+          window.onresize = resetMobileUI;
+        </script>
+        <div id='dropdown-nav' onclick="displayDropdownMenu();">
+          <svg viewBox="-20 -20 120 120" width="60" height="60">
+            <rect width="100" height="20"></rect>
+            <rect y="30" width="100" height="20"></rect>
+            <rect y="60" width="100" height="20"></rect>
+          </svg>
+        </div>
+
+      </div>
+      <div id='fixedbutton'><a class="headerlink btn btn-block btn-lg btn-primary" href='#Overall-Description'> Back to
+          top </a></div>
+      <div class='k-main-inner'>
+        <div class='divHeader'><i>Software Requirements Specification for MenuWhiz</i> </div>
+        <div class='k-location-slug'>
+          <h1 id="Overall-Description"><a class="headerlink" href="#Overall-Description">Overall Description </a></h1>
+        </div>
+        <div class='k-content'>
+          <h2 id="Product-Perspective"><a class="headerlink" href="#Product-Perspective">2.1 Product Perspective</a>
+          </h2>
+          <p> This product is a new, self-contained product designed to fulfill the current lack of efficient service in
+            the dine-in industry. While apps like foodpanda make takeout and home delivery simple, websites of
+            individual shops are often unreliable/ outdated, and also difficult to find. For a customer who has just
+            walked in to a restaurant that is new to him/her, finding the currently available list of items digitally is
+            not possible yet. The major components of this product are: an android application (for customers), a
+            website (for restaurants) and a database to contain the customer/restaurant details and menu information.
+            The system will be connected as follows:</p>
+          <img src='images/Basic system diagram.jpg' class='logo-small' />
+          <p>Figure 1 Basic system diagram</p>
+          <br>
+
+          <h2 id="Product-Functions"> <a class="headerlink" href="#Product-Functions">2.2 Product Functions</a></h2>
+          Using the mobile application, customers will be able to:
+          <li>Register as a customer </li>
+          <li>Sign in to existing account </li>
+          <li>View menu of the restaurant they entered </li>
+          <li>Order food </li>
+          <li>Sign out </li>
+
+          <br>
+
+          Using the web interface, Restaurants will be able to:
+          <li>Register as a restaurant </li>
+          <li>Sign in to existing account</li>
+          <li>Add items to their menu </li>
+          <li>Update items (quantity/ price) </li>
+          <li>Accept order after receiving payment</li>
+          <li>View list of current orders</li>
+          <li>Have an “Admin” interface which will show the order history of the last month.</li>
+          <li>Sign out </li>
+
+
+          <br>
+
+
+          <h2 id="User-Classes-Characteristics"> <a class="headerlink" href="#User-Classes-Characteristics">2.3 User
+              Classes and Characteristics</a></h2>
+          <p>There are two main types of users of this software: The restaurant managers and customers of their
+            restaurants. The restaurant managers can use the website interface to manage their restaurant’s menu and
+            sales. The customers can use the mobile application to detect which restaurant they are in, view the menu
+            and place an order. </p>
+          <p>Both user classes are equally important as without either of them, the platform will not be useful.</p>
+
+          <br>
+
+
+          <h2 id="Operating-Environment"> <a class="headerlink" href="#Operating-Environment">2.4 Operating
+              Environment</a></h2>
+          <p>For Android:</p>
+          <p>Operating System: Android 7.0</p>
+          <p>Disk Space: 100 MB</p>
+          <p>RAM: 1 GB</p>
+          <p>Special feature: NFC enabled phone</p>
+          <br>
+          <p>For website:</p>
+          <p>Any GUI system with a browser installed.</p>
+
+          <br>
+
+
+          <h2 id="Design-Implementation-Constraints"> <a class="headerlink"
+              href="#Design-Implementation-Constraints">2.5 Design and Implementation Constraints</a></h2>
+          <p>Our mobile application and web interface will both require an internet connection to send and retrieve data
+            from the database, hence internet connection is a constraint, without which the product will be unusable.
+          </p>
+          <p>Both interfaces will be connected to the same database. Therefore, efficient memory usage in the database
+            is important. As the database will not be stored with the product and will be accessed remotely, access to
+            the database will be queued when traffic is high. Hence, too many customers or restaurants signing up
+            simultaneously / multiple customers trying to view menus at the same time might result in longer wait times,
+            hence design or update of the database and access to the database has to be done carefully while taking
+            these factors into consideration.</p>
+          <p>Android version is a mobile software constraint as the SDK used requires android version 7.0 and above. NFC
+            enabled phones is a hardware requirement for the mobile application, and restaurants will be advised to use
+            NFC tags of type NTAG 21x, as they can be read/write by current NFC enabled smartphones.</p>
+
+          <br>
+
+          <h2 id="User-Documentation"> <a class="headerlink" href="#User-Documentation">2.6 User Documentation</a></h2>
+          <p>Once the development of our product is completed and a stable, working version is ready, a user manual will
+            be provided.</p>
+
+
+          <br>
+
+          <h2 id="Assumptions-Dependencies"> <a class="headerlink" href="#Assumptions-Dependencies">2.7 Assumptions and
+              Dependencies</a></h2>
+          <p>All requirements have been stated previously, no other assumptions are being made.</p>
+
+          <br>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title> Database Design </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/docs.css" rel="stylesheet">
+
+    <!---Print stylesheel--->
+    <link href="css/print.css" rel="stylesheet" media="print">
+
+</head>
+
+<body>
+
+    <div class='k-page'>
+
+        <div class="k-nav" id="nav-menu">
+            <a href='../SRS.html'><img src='images/Logo.jpg' class='logo-small' /></a>
+
+            <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+
+
+                <a class="nav-link" href="page1_SDS.html" role="tab" aria-selected="">Software Design
+                    Specification</a>
+
+
+                <a class="nav-link" href="Introduction.html" role="tab" aria-selected="">Introduction</a>
+
+
+                <a class="nav-link" href="Document_Conventions.html" role="tab" aria-selected="">Document
+                    Conventions</a>
+
+
+
+                <a class="nav-link" href="Description_Design_Components.html" role="tab" aria-selected="">Description of
+                    Design Components</a>
+
+
+                <a class="nav-link" href="High_Level_Component_Design.html" role="tab" aria-selected="">High-Level
+                    Component Design</a>
+
+
+                <a class="nav-link" href="Class_Diagrams.html" role="tab" aria-selected="">Class Diagrams</a>
+
+
+                <a class="nav-link active" href="#Database-Design" role="tab" aria-selected="">Database Design</a>
+
+
+                <a class="nav-link" href="Implementation_Plan.html" role="tab" aria-selected="">Implementation Plan</a>
+
+
+
+            </div>
+
+        </div>
+
+        <div class='k-main'>
+
+            <div class='k-main-top'>
+                <script>
+                    function displayDropdownMenu() {
+                        e = document.getElementById("nav-menu");
+                        if (e.style.display == "block") {
+                            e.style.display = "none";
+                        }
+                        else {
+                            e.style.display = "block";
+                            document.getElementById("dropdown-nav").style.display = "block";
+                        }
+                    }
+
+                    function resetMobileUI() {
+                        if (window.innerWidth <= 840) {
+                            document.getElementById("nav-menu").style.display = "none";
+                            document.getElementById("dropdown-nav").style.display = "block";
+                        }
+                        else {
+                            document.getElementById("nav-menu").style.display = "block";
+                            document.getElementById("dropdown-nav").style.display = "none";
+                        }
+                    }
+
+                    window.onresize = resetMobileUI;
+                </script>
+                <div id='dropdown-nav' onclick="displayDropdownMenu();">
+                    <svg viewBox="-20 -20 120 120" width="60" height="60">
+                        <rect width="100" height="20"></rect>
+                        <rect y="30" width="100" height="20"></rect>
+                        <rect y="60" width="100" height="20"></rect>
+                    </svg>
+                </div>
+
+            </div>
+			<div id='fixedbutton'><a class="headerlink btn btn-block btn-lg btn-primary" href='#Database-Design'> Back
+                    to top </a></div>
+            <div class='k-main-inner'>
+                <div class='divHeader'><i>Software Design Specification for MenuWhiz</i> </div>
+                <div class='k-location-slug'>
+                    <h1 id="Database-Design"><a class="headerlink" href="#Database-Design">Database Design </a>
+                    </h1>
+
+                </div>
+                <div class='k-content'>
+                   
+                    <br>
+                    <h2 id="ER-Diagram"><a class="headerlink" href="#ER-Diagram"> ⦁	ER Diagram</a></h2><br>
+                    <P><img src="images/ERD.PNG" width=100%></P><br><br>
+                    <h2 id="Tables"><a class="headerlink" href="#Tables"> ⦁ Tables</a></h2><br>
+                    <p>
+                        <b>⦁ Name: Customers<br>
+                            Purpose: Storing the information of customers<br>
+                            Attributes:</b><br>
+                        ⦁ Name: Customer_ID<br>
+                        Type: Integer<br>
+                        Unique: Yes<br>
+                        Primary key: Yes<br>
+                        Foreign key: No
+
+
+                        <br>
+                        <br>
+
+                        ⦁ Name: Name<br>
+                        Type: String<br>
+                        Unique: No<br>
+                        Primary key: No<br>
+                        Foreign key: No
+
+
+
+                        <br>
+                        <br>
+
+                        ⦁ Name: Email<br>
+                        Type: String<br>
+                        Unique: Yes<br>
+                        Primary key: No<br>
+                        Foreign key: No
+                        <br>
+                        <br>
+                        ⦁ Name: Phone number<br>
+                        Type: Integer<br>
+                        Unique: No<br>
+                        Primary key: No<br>
+                        Foreign key: No
+                        <br>
+                        <br>
+                        ⦁ Name: Password<br>
+                        Type: String<br>
+                        Unique: No<br>
+                        Primary key: No<br>
+                        Foreign key: No
+                        <br><br>
+                        <b>⦁ Name: Restaurant<br>
+                            Purpose: Storing the information of restaurants<br>
+                            Attributes:
+                        </b><br>
+                        ⦁ Name: Restaurant_ID<br>
+                        Type: Integer<br>
+                        Unique: Yes<br>
+                        Primary key: Yes<br>
+                        Foreign key: No<br><br>
+
+                        ⦁ Name: Name<br>
+                        Type: String<br>
+                        Unique: Yes<br>
+                        Primary key: No<br>
+                        Foreign key: No<br><br>
+
+                        ⦁ Name: Email<br>
+                        Type: String<br>
+                        Unique: Yes<br>
+                        Primary key: No<br>
+                        Foreign key: No<br><br>
+
+                        ⦁ Name: Address<br>
+                        Type: String<br>
+                        Unique: No<br>
+                        Primary key: No<br>
+                        Foreign key: No<br> <br>
+
+                        ⦁ Name: Phone number<br>
+                        Type: Integer<br>
+                        Unique: No<br>
+                        Primary key: No<br>
+                        Foreign key: No<br> <br>
+
+                        ⦁ Name: Password<br>
+                        Type: String<br>
+                        Unique: No<br>
+                        Primary key: No<br>
+                        Foreign key: No<br><br>
+
+                        ⦁ Name: NFC_Tag<br>
+                        Type: String<br>
+                        Unique: Yes<br>
+                        Primary key: No<br>
+                        Foreign key: No<br><br>
+                        <b>Dependent table: Items
+                        </b><br>
+                        ⦁ Name: Item_ID<br>
+                        Type: Integer<br>
+                        Partially Unique: Yes<br>
+                        Partial Primary key: Yes<br>
+                        Foreign key: No<br><br>
+
+                        ⦁ Name: Name<br>
+                        Type: String<br>
+                        Unique: Yes<br>
+                        Primary key: No<br>
+                        Foreign key: No<br><br>
+
+                        ⦁ Name: Email<br>
+                        Type: Quantity<br>
+                        Unique: No<br>
+                        Primary key: No<br>
+                        Foreign key: No<br><br>
+
+                        ⦁ Name: Price<br>
+                        Type: Float<br>
+                        Unique: No<br>
+                        Primary key: No<br>
+                        Foreign key: No<br><br>
+                        <b>
+                            ⦁ Name: Order<br>
+                            Purpose: Storing the information of current order status<br>
+
+                            Attributes:</b> <br>
+                        ⦁ Name: orderNO <br>
+                        Type: Integer <br>
+                        Unique: Yes <br>
+                        Primary key: Yes <br>
+                        Foreign key: No <br> <br>
+
+                        ⦁ Name: Status <br>
+                        Type: String <br>
+                        Unique: No <br>
+                        Primary key: No <br>
+                        Foreign key: No <br> <br>
+						
+						<b>
+						⦁ Name: Placed_Orders<br>
+						  Purpose: Storing the information of who placed which orders when. <br>
+						Attributes: </b> <br>
+						⦁ Name: Customer_ID<br>
+						Type: Integer<br>
+						Unique: Yes<br>
+						Primary key: Yes <br>
+						Foreign key: Yes <br><br>
+
+						⦁ Name: orderNo <br>
+						Type: Integer<br>
+						Unique: Yes<br>
+						Primary key: Yes<br>
+						Foreign key: Yes<br><br>
+
+						⦁ Name: Date<br>
+						Type: Date<br>
+						Unique: No <br>
+						Primary key: No<br>
+						Foreign key: No<br><br>
+						
+						<b>
+						⦁ Name: Order_Contents<br>
+						Purpose: Storing the information of which items each order contains<br>
+						Attributes: </b> <br>
+						⦁ Name: orderNo <br>
+						Type: Integer<br>
+						Unique: Yes<br>
+						Primary key: Yes<br>
+						Foreign key: Yes<br><br>
+						
+						⦁ Name: Item_ID<br>
+						Type: Integer<br>
+						Unique: Yes<br>
+						Primary key: Yes <br>
+						Foreign key: Yes<br><br>
+
+						⦁ Name: Quantity<br>
+						Type: Integer<br>
+						Unique: No<br>
+						Primary key: No<br>
+						Foreign key: No<br>
+
+
+
+
+
+
+
+
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+@media print {
+	
+	div.divFooter {
+		position: fixed;
+		bottom: 0;
+	
+  }
+  
+.noprint {
+	display:none;
+}
+
+.k-nav {
+  display:none;
+}
+  
+ h1 {
+  font-weight: 700;
+  font-size: 70px;
+  padding-bottom: 100px;
+  text-align: right;
+} 
+
+ h2 {
+  font-weight: 700;
+  font-size: 45px;
+  padding-bottom: 50px;
+  padding-top:30px;
+  text-align: right;
+}
+
+.k-page {
+  width:100%
+}
+
+
+#fixedbutton {
+    display:none;
+}
+.k-location-slug {
+  width: 100%;
+  border-top: 10px solid #000000;
+  border-bottom: none;
+}
+
+.k-main {
+  padding-top: 150px;
+  background: #fff;
+  float: left;
+}
+
+.k-content {
+  width: 100%;
+  padding: 2rem;
+  padding-top: 1rem;
+  text-align: right;
+}
+}

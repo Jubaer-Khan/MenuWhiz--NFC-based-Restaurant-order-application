@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogIn">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="416dp"
+        android:layout_height="197dp"
+        android:src="@drawable/Logo"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="69dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="-13dp"
+        tools:layout_editor_absoluteY="333dp">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="      Email: "
+            android:padding="15dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="316dp"
+            android:drawableLeft="@drawable/ic_baseline_email_24"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="-76dp"
+        tools:layout_editor_absoluteY="421dp">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="400"
+            android:layout_height="wrap_content"
+            android:hint="     Password "
+            android:padding="15dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="316dp"
+            android:drawableLeft="@drawable/lock_24"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button_black"
+        android:text="Sign up"
+        app:layout_constraintEnd_toStartOf="@+id/btn_signin"
+        app:layout_constraintHorizontal_bias="0.299"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="570dp" />
+
+    <Button
+        android:id="@+id/btn_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button_black"
+        android:text="Sign in"
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="533dp" />
+
+    <Button
+        android:id="@+id/btn_signin_google"
+        android:layout_width="129dp"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_button_black"
+        android:text="Sign in with google"
+        tools:layout_editor_absoluteX="248dp"
+        tools:layout_editor_absoluteY="600dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="224dp"
+        android:text="Forgot Password?"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

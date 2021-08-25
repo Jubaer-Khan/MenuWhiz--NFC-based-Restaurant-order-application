@@ -1,0 +1,23 @@
+        #note to self= you have to send the primary key (Customer_id) as a parameter to load the serialiser somehow
+        #s=CustomerSerializer(d)
+ #   >>> s.data
+#    {'customer_id': 2, 'name': 'Kevinn', 'email': 'kevin@gmail.com', 'phone': '12345', 'password': 'abc'}
+
+#    >>> from rest_framework.renderers import JSONRenderer
+ #   >>> from rest_framework.parsers import JSONParser
+  #  >>> content= JSONRenderer().render(s.data)
+   # >>> content
+    #b'{"customer_id":2,"name":"Kevinn","email":"kevin@gmail.com","phone":"12345","password":"abc"}'
+    #>> serializer = CustomerSerializer(Customer.objects.all(),many=True)
+
+
+for PUT (update) all fields need to be sent
+
+token authentication
+
+ python manage.py runserver 192.168.1.87:8000
+
+fix google sign in phone number issue (tries to store phone number even if account exists)
+
+fix google sign in session issue ( might be done by google sign in last account alr)
+

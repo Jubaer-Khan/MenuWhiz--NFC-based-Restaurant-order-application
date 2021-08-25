@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+	
+    
+	<i class="fas fa-id-card"></i>
+	<input type='text' value="{{restaurant.restaurant_id}}" style="text-align:center; width: 50%; background-color: #F9E3F0; padding:15px" readonly=true>  </input>
+	</br>
+	</br>
+	
+	<i class="fa fa-user"></i>
+	<input type='text' value="{{restaurant.name}}" style="text-align:center; width: 50%; background-color: #F9E3F0; padding:15px" readonly=true>  </input>
+	</br>
+	</br>
+	
+	<i class="fa fa-envelope"></i>
+	<input type='text' value="{{restaurant.email}}" style="text-align:center; width: 50%; background-color: #F9E3F0; padding:15px" readonly=true>  </input>
+	</br>
+	</br>
+	
+	<i class="fa fa-address-book"></i>
+	<input type='text' value="{{restaurant.address}}" style="text-align:center; width: 50%; background-color: #F9E3F0; padding:15px" readonly=true>  </input>
+	</br>
+	</br>
+	
+	<i class="fa fa-phone"></i>
+	<input type='text' value="{{restaurant.phone}}" style="text-align:center; width: 50%; background-color: #F9E3F0; padding:15px" readonly=true>  </input>
+	</br>
+	</br>
+	
+	<b> NFC</b>
+	<input type='text' value="{{restaurant.NFC_Tag}}" style="text-align:center; width: 48%; background-color: #F9E3F0; padding:15px" readonly=true>  </input>
+	</br>
+    <br>
+	
+	
+	
+ 
+{% endblock %}
+    

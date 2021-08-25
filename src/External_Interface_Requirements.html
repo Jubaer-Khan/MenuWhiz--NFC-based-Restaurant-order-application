@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title> External Interface Requirements </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/docs.css" rel="stylesheet">
+
+    <!---Print stylesheel--->
+    <link href="css/print.css" rel="stylesheet" media="print">
+
+</head>
+
+<body>
+
+    <div class='k-page'>
+
+        <div class="k-nav" id="nav-menu">
+            <a href='../SRS.html'><img src='images/Logo.jpg' class='logo-small' /></a>
+
+            <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+
+
+                <a class="nav-link" href="page1.html" role="tab" aria-selected="">Software Requirements
+                    Specification</a>
+
+
+                <a class="nav-link" href="Introduction.html" role="tab" aria-selected="">Introduction</a>
+
+
+                <a class="nav-link" href="Overall_description.html" role="tab" aria-selected="">Overall Description</a>
+
+
+
+
+                <a class="nav-link active" href="#External-Interface-Requirements" role="tab" aria-selected="">External
+                    Interface Requirements</a>
+                <a class="nav-sublink reference internal" href="#User-Interfaces">User Interfaces</a>
+                <a class="nav-sublink reference internal" href="#Hardware-Interfaces">Hardware Interfaces</a>
+                <a class="nav-sublink reference internal" href="#Software-Interfaces">Software Interfaces</a>
+                <a class="nav-sublink reference internal" href="#Communications-Interfaces">Communications
+                    Interfaces</a>
+
+
+
+                <a class="nav-link" href="System_Features.html" role="tab" aria-selected="">System Features</a>
+
+
+                <a class="nav-link" href="Other_Nonfunctional_Requirements.html" role="tab" aria-selected="">Other
+                    Nonfunctional Requirements</a>
+
+
+                <a class="nav-link" href="Other_Requirements.html" role="tab" aria-selected="">Other Requirements</a>
+
+
+                <a class="nav-link" href="Appendix_A.html" role="tab" aria-selected="">Appendix A: Glossary</a>
+
+
+                <a class="nav-link" href="Appendix_B.html" role="tab" aria-selected="">Appendix B: Analysis Models</a>
+
+
+                <a class="nav-link" href="Appendix_C.html" role="tab" aria-selected="">Appendix C: To Be Determined
+                    List</a>
+            </div>
+
+        </div>
+
+        <div class='k-main'>
+
+            <div class='k-main-top'>
+                <script>
+                    function displayDropdownMenu() {
+                        e = document.getElementById("nav-menu");
+                        if (e.style.display == "block") {
+                            e.style.display = "none";
+                        }
+                        else {
+                            e.style.display = "block";
+                            document.getElementById("dropdown-nav").style.display = "block";
+                        }
+                    }
+
+                    function resetMobileUI() {
+                        if (window.innerWidth <= 840) {
+                            document.getElementById("nav-menu").style.display = "none";
+                            document.getElementById("dropdown-nav").style.display = "block";
+                        }
+                        else {
+                            document.getElementById("nav-menu").style.display = "block";
+                            document.getElementById("dropdown-nav").style.display = "none";
+                        }
+                    }
+
+                    window.onresize = resetMobileUI;
+                </script>
+                <div id='dropdown-nav' onclick="displayDropdownMenu();">
+                    <svg viewBox="-20 -20 120 120" width="60" height="60">
+                        <rect width="100" height="20"></rect>
+                        <rect y="30" width="100" height="20"></rect>
+                        <rect y="60" width="100" height="20"></rect>
+                    </svg>
+                </div>
+
+            </div>
+            <div id='fixedbutton'><a class="headerlink btn btn-block btn-lg btn-primary" href='#External-Interface-Requirements'> Back to
+                top </a></div>
+            <div class='k-main-inner'>
+                <div class='divHeader'><i>Software Requirements Specification for MenuWhiz</i> </div>
+                <div class='k-location-slug'>
+                    
+                    <h1 h1 id="External-Interface-Requirements"><a class="headerlink" href="#External-Interface-Requirements">External Interface Requirements
+                        </a></h1>
+                </div>
+                <div class='k-content'>
+                    <h2 id="User-Interfaces"><a class="headerlink" href="#User-Interfaces">3.1 User Interfaces </a></h2>
+					<br> 
+					<h3 id="Android-Interface"> <a class="headerlink" href="#Android-Interface"> 3.1.1	Sample Images of Android Application Interface </a> </h3>
+					
+					<div class="row">
+						  <div class="column">
+							<figure>
+							<img class='color' src="images/main.PNG"  style="width:70%">
+							<figcaption> Splash Screen </figcaption>
+							</figure>
+						  </div>
+						  <div class="column">
+							<figure>
+							<img class='color' src="images/Log in page.PNG" style="width:70%">
+							<figcaption> Log in Screen </figcaption>
+							</figure>
+						  </div>
+						  <div class="column">
+							<figure>
+							<img class='color' src="images/Cart.PNG" style="width:70%">
+							<figcaption> Cart </figcaption>
+							</figure>
+						  </div>
+					</div>
+					<br> <br>
+						<div class="row">
+						  <div class="column">
+							<figure>
+							<img class='color' src="images/Log_in_page_error.PNG" style="width:23%">
+							<figcaption> Error popup </figcaption>
+							</figure>
+						  </div>
+						</div>
+                    <br> <br> 
+					
+					<h3 id="Website-Interface"> <a class="headerlink" href="#Website-Interface"> 3.1.2	Sample Images of Website Interface </a> </h3>
+					
+					<div class="row"> 
+						<figure>
+							<img class='color' src="images/Web_login.PNG" style="width:85%">
+							<figcaption> Login Screen </figcaption>
+						</figure>
+					</div>
+					
+					<div class="row"> 
+						<figure>
+							<img class='color' src="images/web_main_side.PNG" style="width:85%">
+							<figcaption> Menu Screen </figcaption>
+						</figure>
+					</div>
+					
+					<div class="row"> 
+						<figure>
+							<img class='color' src="images/Update.PNG" style="width:85%">
+							<figcaption> Update Item Popup </figcaption>
+						</figure>
+					</div>
+					
+					
+                    <h2 id="Hardware-Interfaces"> <a class="headerlink" href="#Hardware-Interfaces">3.2 Hardware
+                            Interfaces</a></h2>
+
+                    <p>Since our product is based on the usage of NFC tags, phones must be NFC enabled in order to use
+                        the application. Website users (restaurant managers) will have to accustom themselves to
+                        configuring NFC tags.</p>
+
+                    <br>
+
+
+
+                    <h2 id="Software-Interfaces"> <a class="headerlink" href="#Software-Interfaces">3.3 Software
+                            Interfaces</a></h2>
+                    <p>Both the mobile application and the website will communicate with the database via internet. The
+                        operating system will provide such interfaces.<br>
+                        <b>Database:</b> SQL or SQlite<br>
+                        <b>Tools:</b> Android Studio (for android development)<br>
+                        <b>Framework:</b> Django (For backend and website development)<br> 
+                        <b>Languages:</b>Java and Python </p>
+                        <br>
+
+
+                    <h2 id="Communications-Interfaces"> <a class="headerlink" href="#Communications-Interfaces">3.4
+                            Communications Interfaces</a></h2>
+
+                    <p><li>Web browser will be required to access the website.</li><br> 
+                        <li>Forms will be used for sign in and sign up purposes.</li><br>
+                        <li>Network-Server communication will use the HTTP protocol.</li></p>
+
+                    <br>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CB7575"
+    android:orientation="vertical"
+    tools:context=".PhoneNumberActivity">
+
+
+    <TextView
+        android:id="@+id/Showtext"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:text="@string/please_enter_your_phone_number" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="#FAF5F5"
+            android:gravity="center"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_showNameCode="true"
+            app:ccp_textSize="16sp"
+            />
+
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="#B3ADAD"
+            android:backgroundTint="#B3ADAD"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:textSize="16sp"
+            android:autofillHints="" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/GetPhoneNumber"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="#B03C23"
+        android:text="@string/save_phone_number" />
+
+
+</LinearLayout>

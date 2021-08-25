@@ -1,0 +1,273 @@
+body{
+    padding:0;
+    margin:0;
+    
+}
+#mydiv{
+    background-color: #cb7575;
+    width:100%;
+    height: 60px;
+    padding-bottom: 10px; 
+}
+
+.mbar{
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    margin-top: 9px;
+    margin-left: 17px;
+    padding-left: 4px;
+}
+#menuicon{
+    float: right;
+    padding-top:10px;
+    background-color:#cb7575;
+    height: 60px;
+    width: 70px;
+}
+#menuicon:hover{
+    cursor: pointer;
+    background-color:red;
+}
+.ilist{
+    margin-left: 150px;
+}
+.ilist li {
+    display: inline-flex;
+    margin: 45px;
+    font-size: 20px;
+}
+#ItemName{
+    margin-left: 120px;
+}
+
+#ItemName ol li{
+    font-size: 25px;
+    margin: 25px;
+    padding-top: 2px;
+   
+}
+#first{
+    background-color:#cb7575;
+    padding-left: 20px;
+    width: 160px;
+    height: 33px;
+}
+#scnd{
+    background-color:#cb7575;
+    padding-left: 20px;
+    width: 160px;
+    height: 33px;
+}
+#third{
+    background-color:#cb7575;
+    padding-left: 20px;
+    width: 160px;
+    height:33px;
+}
+#fourth{
+    background-color:#cb7575;
+    padding-left: 20px;
+    width: 160px;
+    height: 33px;
+}
+.container{
+    display: block;
+    border: 1px black;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin: 22px;
+    border-style:double;
+    border-width: 4px;
+    text-align: center;
+    padding: 1px;
+    margin:35px;
+    cursor: pointer;
+}
+#oper{
+    margin-left: 310px;
+    margin-top: -240px;
+ 
+}
+#qnty{
+    font-size: 25px;
+    list-style-type:none;
+    margin-left: 355px;
+    margin-top: -243px;
+}
+#firstq{
+    background-color:#cb7575;
+    margin: 24px;
+    width: 22px;
+    height: 30px;
+    text-align: center;
+    padding: 2px;
+}
+#scndq{
+    background-color:#cb7575;
+    margin: 24px;
+    width: 22px;
+    height: 30px;
+    text-align: center;
+    padding: 2px;
+}
+#thirdq{
+    background-color:#cb7575;
+    margin: 24px;
+    padding:2px;
+    width: 22px;
+    height:30px;
+    text-align: center;
+}
+#fourthq{
+    background-color:#cb7575;
+    margin: 24px;
+    padding:2px;
+    width: 22px;
+    height: 30px;
+    text-align: center;
+}
+#minus .cont{
+    display: block;
+    border: 1px black;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin: 35px;
+    border-style:double;
+    border-width: 4px;
+    text-align: center;
+    padding: 1px;
+    cursor:pointer;
+}
+#minus{
+    margin-left: 375px;
+    margin-top: -241px;
+}
+#fr{
+    background-color:#cb7575;
+    margin: 22px;
+    width: 250px;
+    height: 33px;
+    text-align: center;
+    padding: 2px;
+}
+#sc{
+    background-color:#cb7575;
+    margin: 22px;
+    width: 250px;
+    height: 33px;
+    text-align: center;
+    padding: 2px;
+}
+#th{
+    background-color:#cb7575;
+    margin: 22px;
+    padding:2px;
+    width: 250px;
+    height:33px;
+    text-align: center;
+}
+#fo{
+    background-color:#cb7575;
+    margin: 22px;
+    padding:2px;
+    width: 250px;
+    height: 33px;
+    text-align: center;
+}
+#des{
+    margin-left: 420px;
+    margin-top: -245px;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+#pc1{
+    background-color:#cb7575;
+    margin: 25px;
+    width: 55px;
+    height: 30px;
+    text-align: center;
+    padding: 2px;
+}
+#pc2{
+    background-color:#cb7575;
+    margin: 25px;
+    width: 55px;
+    height: 30px;
+    text-align: center;
+    padding: 2px;
+}
+#pc3{
+    background-color:#cb7575;
+    margin: 25px;
+    padding:2px;
+    width: 55px;
+    height:30px;
+    text-align: center;
+}
+#pc4{
+    background-color:#cb7575;
+    margin: 25px;
+    padding:2px;
+    width: 55px;
+    height: 30px;
+    text-align: center;
+    border: 1px black;
+}
+#pric{
+    font-size: 25px;
+    margin-left: 690px;
+    margin-top: -262px;
+    padding:2px;
+    list-style-type: none;
+}
+#update{
+    list-style-type:none;
+    float: right;
+    margin-right: 350px;
+    margin-top: -249px;
+}
+#update .btn{
+    background-color:palegreen;
+    margin: 16px;
+    width: 70px;
+    height: 25px;
+    text-align: center;
+    padding: 3px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    border-width: thin;
+}
+#del{
+ list-style-type: none;
+ float: right;
+ margin-right: 250px;
+ margin-top: -272px;
+ padding: 4px;
+}
+#del li{
+    color: #800000;
+    cursor: pointer;
+    margin: 35px;
+    font-size: 20px;
+}
+#footer{
+    margin-left: 550px;
+    margin-top: 120px;
+}
+#footer .ftn{
+    background-color:white;
+    color:black;
+    border:2px solid darkred;
+    border-radius: 8px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.main-container{
+    margin-left: 20px;
+}

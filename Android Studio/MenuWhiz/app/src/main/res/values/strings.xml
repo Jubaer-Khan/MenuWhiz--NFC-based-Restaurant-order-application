@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MenuWhiz</string>
+    <string name="title_activity_phone_number">PhoneNumberActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="save_phone_number">Save Phone Number</string>
+    <string name="please_enter_your_phone_number">Please Enter your Phone Number</string>
+
+    <string name="server_client_id">468039250531-lm8jj5ou77fnlqcfoenk7kesa3db33cq.apps.googleusercontent.com</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="available">Available :</string>
+    <string name="qty">Qty:</string>
+    <string name="currencysign">/-</string>
+    <string name="delete">Delete</string>
+</resources>

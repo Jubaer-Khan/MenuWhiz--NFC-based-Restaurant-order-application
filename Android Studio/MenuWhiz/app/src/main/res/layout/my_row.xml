@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:background="@color/themeColor">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:textColor="#FFFF"
+
+
+                />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/available"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+
+
+             />
+
+            <TextView
+                android:id="@+id/availableqty"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="textStart"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+            android:weightSum="9"
+            android:background="@color/themeColor">
+
+            <ImageView
+                android:id="@+id/currency"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10sp"
+                app:srcCompat="@drawable/taka"
+                />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:textColor="#FFFF"
+
+                />
+
+            <Button
+                android:id="@+id/lowerQty"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_minus_icon"
+
+                />
+
+            <TextView
+                android:id="@+id/orderqty"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/addQty"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_plus_icon"
+
+                />
+
+
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/addItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="110dp"
+            android:layout_gravity="right"
+            android:text="@string/add_to_cart"
+            android:background="#34ba4d"/>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title> Other Requirements </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/docs.css" rel="stylesheet">
+
+    <!---Print stylesheel--->
+    <link href="css/print.css" rel="stylesheet" media="print">
+
+</head>
+
+<body>
+
+    <div class='k-page'>
+
+        <div class="k-nav" id="nav-menu">
+            <a href='../SRS.html'><img src='images/Logo.jpg' class='logo-small' /></a>
+
+            <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+
+
+                <a class="nav-link" href="page1.html" role="tab" aria-selected="">Software Requirements
+                    Specification</a>
+
+
+                <a class="nav-link" href="Introduction.html" role="tab" aria-selected="">Introduction</a>
+
+
+                <a class="nav-link" href="Overall-Description.html" role="tab" aria-selected="">Overall Description</a>
+
+
+
+                <a class="nav-link" href="External_Interface_Requirements.html" role="tab" aria-selected="">External
+                    Interface Requirements</a>
+
+
+                <a class="nav-link" href="System_Features.html" role="tab" aria-selected="">System Features</a>
+
+
+                <a class="nav-link" href="Other_Nonfunctional_Requirements.html" role="tab" aria-selected="">Other
+                    Nonfunctional Requirements</a>
+
+
+                <a class="nav-link active" href="#Other-Requirements" role="tab" aria-selected="">Other Requirements</a>
+
+
+                <a class="nav-link" href="Appendix_A.html" role="tab" aria-selected="">Appendix A: Glossary</a>
+
+
+                <a class="nav-link" href="Appendix_B.html" role="tab" aria-selected="">Appendix B: Analysis Models</a>
+
+
+                <a class="nav-link" href="Appendix_C.html" role="tab" aria-selected="">Appendix C: To Be Determined
+                    List</a>
+            </div>
+
+        </div>
+
+        <div class='k-main'>
+
+            <div class='k-main-top'>
+                <script>
+                    function displayDropdownMenu() {
+                        e = document.getElementById("nav-menu");
+                        if (e.style.display == "block") {
+                            e.style.display = "none";
+                        }
+                        else {
+                            e.style.display = "block";
+                            document.getElementById("dropdown-nav").style.display = "block";
+                        }
+                    }
+
+                    function resetMobileUI() {
+                        if (window.innerWidth <= 840) {
+                            document.getElementById("nav-menu").style.display = "none";
+                            document.getElementById("dropdown-nav").style.display = "block";
+                        }
+                        else {
+                            document.getElementById("nav-menu").style.display = "block";
+                            document.getElementById("dropdown-nav").style.display = "none";
+                        }
+                    }
+
+                    window.onresize = resetMobileUI;
+                </script>
+                <div id='dropdown-nav' onclick="displayDropdownMenu();">
+                    <svg viewBox="-20 -20 120 120" width="60" height="60">
+                        <rect width="100" height="20"></rect>
+                        <rect y="30" width="100" height="20"></rect>
+                        <rect y="60" width="100" height="20"></rect>
+                    </svg>
+                </div>
+
+            </div>
+            <div class='k-main-inner'>
+                <div class='divHeader'><i>Software Requirements Specification for MenuWhiz</i> </div>
+                <div class='k-location-slug'>
+                    <h1 id="Other-Requirements"><a class="headerlink" href="#Other-Requirements">Other Requirements </a>
+                    </h1>
+
+                </div>
+                <div class='k-content'>
+                    <p>Depending on the development and growth of this project, it might be necessary to shift to a more
+                        robust database management system eventually.
+
+                        Reuse or extension of the product will require permission of the original developers of the
+                        product. </p>
+
+                    <br>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

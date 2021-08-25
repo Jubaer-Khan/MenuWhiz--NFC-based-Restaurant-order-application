@@ -1,0 +1,95 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+	{% load static %}
+	<link rel="stylesheet" href='{% static "main.css" %}' >	
+	
+	 <!-- Custom Css -->
+	 {% load static %}
+	<link rel="stylesheet" href='{% static "signup.css" %}'>
+	
+  
+
+
+  <title>MenuWhiz</title>
+  
+  
+</head>
+
+<body>
+      <nav class='navbar navbar-expand-md navbar-dark bg-dark'>
+		<div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        
+		</div>
+		<div class="mx-auto order-0">
+			<a class="navbar-brand mx-auto" href="#"> 
+				{% load static %}
+				<img src="{% static "logo.jpg" %}" height="250"> </a>
+				
+		</div>
+		<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+			<class="navbar-nav ml-auto">
+		</div>
+	</nav>
+		
+		<div class="reg_bottom" >
+			<div class="container" style="">
+				<div style="max-width:400px;margin:auto; text-align:center;" class="pt-5">
+				<h3> Make Dining in Dine-Ins Easier! </h3>
+					<form method="POST" autocomplete="off">
+						{% csrf_token %}
+						<div class="input-icons">
+							<div class="w-100 my-3">
+								<i class="fa fa-envelope"></i>
+									<input class="input-field" type="email" placeholder="Email" name="email" autocomplete="off" required>
+							</div>
+							<div class="w-100 my-3">
+								<i class="fa fa-lock"></i>
+									<input class="input-field" type="password" placeholder="Password" name="password" autocomplete="off" required>
+							</div>
+							<label class="text-danger"> {{msg}}</label>
+							<div class="d-flex justify-content-around mt-5 mb-3">
+								<button  type="button" class="btn btn-outline-dark" onclick="location.href = '/registration'"> Sign Up</a></button>
+								<button type="button submit" class="btn btn-outline-dark" value="submit">Sign In</button>
+							</div>
+							
+					</form>
+					
+						</div>
+				</div>
+
+			</div>
+
+		</div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

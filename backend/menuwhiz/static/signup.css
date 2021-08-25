@@ -1,0 +1,80 @@
+* {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    
+  }
+  body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  header{
+    height: 100vh;
+    width: 100%;
+  }
+  .navigation-bar {
+    width: 100%;  /* i'm assuming full width */
+    height: 100px; /* change it to desired width */
+    background-color:#cb7575; /* change to desired color */
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+}
+.logo {
+   
+    vertical-align: top;
+    width: 300px;
+    height: 110px;
+    margin-left: 625px;
+    margin-top: auto;    /* if you want it vertically middle of the navbar. */
+}
+  .reg_bottom{
+    height: 70vh;
+    width: 100%;
+  }
+
+  .input-icons i { 
+    position: absolute; 
+    padding-top: 24px;
+    padding-left: 10px;
+    color: #343a40;
+    ;
+} 
+  
+.input-icons { 
+    width: 100%; 
+    margin-bottom: 10px; 
+} 
+  
+.icon { 
+    padding: 10px; 
+    min-width: 40px; 
+} 
+  
+.input-field { 
+  width: 100%;
+  padding: 20px;
+  padding-left: 35px;
+  border: none;
+  border-bottom: 1px solid #CB7574;
+} 
+.input-field:focus { 
+  width: 100%;
+  padding: 20px;
+  padding-left: 35px;
+  border: 1px solid #343a40;
+} 
+.btn-outline-dark {
+  border-color: #CB7574;
+}
+.btn-outline-dark:hover {
+  color: #fff;
+  background-color: #CB7574;
+  border-color: #CB7574;
+}
+a {
+  color: #343a40;
+}
+a:hover {
+  color: #CB7574;
+  text-decoration: none;
+}

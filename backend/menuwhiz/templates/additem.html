@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+	
+	
+    
+		<form method="POST">
+		 {% csrf_token %}
+            <!-- !st Row -->
+            <div class="row">
+                <div class="col-4">
+
+					<input class="input-field" type="text" placeholder="Name of Item" name="name" autocomplete="off" style="font-size:25px; background-color: #cb7575; display: inline-block; width: 200px; height:100px "required>
+                    
+                  
+                    
+                    
+                </div>
+                <div class="col-4">
+                    
+                        <input class="input-field" type="text" placeholder="Quantity of item" name="quantity" autocomplete="off" style="font-size:25px; background-color: #cb7575; display: inline-block; width: 200px; height:100px "required>
+                    
+                    
+                </div>
+				 <div class="col-4">
+                    <input class="input-field" type="text" placeholder="Price of Item" name="price" autocomplete="off" style="font-size:25px; background-color: #cb7575; display: inline-block; width: 200px; height:100px "required>
+                    
+                </div>
+            </div>
+            <!-- 2st Row -->
+            <div class="row py-3">
+               
+            </div>
+            <!-- 3rd Row -->
+            <div class="row py-3">
+                <div class="col-12 text-center">
+                    <button type="button submit" class="btn btn-lg btn-success">Add Item</button>
+                </div>
+            </div>
+			</form>
+        
+        
+
+    
+
+{% endblock %}

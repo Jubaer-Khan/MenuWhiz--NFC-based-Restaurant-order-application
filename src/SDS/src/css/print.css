@@ -1,0 +1,137 @@
+@media print {
+
+@page {
+	size: auto;
+	margin-top: 8mm;
+	margin-bottom: 5mm;
+	margin-left: 10mm;
+	margin-right: 10mm;
+}
+
+body {
+  font-family: 'Calibri', sans-serif;
+  font-size: 25px;
+}	
+
+div.divFooter {
+		position: fixed;
+		bottom: 0;
+	
+}
+
+.divHeader {
+	  position: relative;
+	  top: 2;
+	  padding-bottom: 20px;
+	  font-size: 18px;
+  }
+  
+  
+.noprint {
+	display:none;
+}
+
+#fixedbutton {
+    display:none;
+}
+.k-nav {
+  display:none;
+}
+ 
+a {
+color: #000000;
+text-decoration: none !important;
+} 
+ 
+ h1 {
+  font-weight: 700;
+  font-size: 50px;
+  padding-bottom: 5px;
+  text-align: left;
+
+} 
+
+ h2 {
+  font-weight: 700;
+  font-size: 40px;
+  padding-bottom: 10px;
+  text-align: left;
+  color: #000000;
+ 
+}
+
+h3 {
+	font-weight: 700;
+  font-size: 30px;
+  padding-bottom: 10px;
+  text-align: left;
+  color: #000000;
+}
+	
+p {
+	font-size: 25px;
+}
+
+img {
+	filter: grayscale(100%);
+}
+
+table {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+th {
+	border: #FFFFFF;
+}
+
+th.actors {
+	width: 50%;
+
+}
+
+.k-page {
+  width:92%
+}
+
+.k-location-slug {
+  width: 92%;
+  border-top: none;
+  border-bottom: none;
+  padding-bottom: 5px;
+  padding-top: none;
+}
+
+.k-main {
+  background: #fff;
+  float: left;
+}
+
+.k-content {
+  width: 92%;
+  padding: 2rem;
+  padding-top: 1rem;
+  text-align: left;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 10px;
+
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 15px;
+}
+
+.color {
+	filter:none !important;
+}
+}

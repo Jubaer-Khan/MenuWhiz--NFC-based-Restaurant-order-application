@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+	
+
+	
+	{% if orders.exists %}	
+
+	<table class="table">
+		<thead class="thead-light">
+			<tr>
+			  <th scope="col">Order No.</th>
+			  <th scope="col">Customer ID</th>
+			  <th scope="col">Items</th>
+			  <th scope="col">Status</th>
+			  <th scope="col">Update?</th>
+			</tr>
+		</thead>
+
+	
+	{% for Placed_order in orders %}
+
+
+  <tbody>
+	
+    <tr>
+	<form method="POST">
+	{% csrf_token %}
+      <th> <input type="text" name="orderid" value="{{Placed_order.order.order_id}}" readonly=true></th>
+      <td> <input type="text" name="customerid" value="{{Placed_order.customer.customer_id}}" readonly=true> </input> </td>
+		<td> <button class="btn btn-primary" type="submit" value="view" name="_view"> View Order Contents </button> </td>
+      <td> Placed </td>
+	  <td> <button class="btn btn-info" type="submit" value="update" name="_update"> Mark as delivered </button> </td>
+    </form>
+	</tr>
+	
+	{% endfor %}
+	
+	  </tbody>
+
+</table>
+
+	
+	{% else %}
+	No current orders!
+	
+	{% endif %} 
+	
+	
+ 
+{% endblock %}
+    

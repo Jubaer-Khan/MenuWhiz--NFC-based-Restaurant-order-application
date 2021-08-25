@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title> Description of Design Components </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/docs.css" rel="stylesheet">
+
+    <!---Print stylesheel--->
+    <link href="css/print.css" rel="stylesheet" media="print">
+
+</head>
+
+<body>
+
+    <div class='k-page'>
+
+        <div class="k-nav" id="nav-menu">
+            <a href='../SRS.html'><img src='images/Logo.jpg' class='logo-small' /></a>
+
+            <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+
+
+                <a class="nav-link" href="page1_SDS.html" role="tab" aria-selected="">Software Design
+                    Specification</a>
+
+
+                <a class="nav-link" href="Introduction_SDS.html" role="tab" aria-selected="">Introduction</a>
+
+
+                <a class="nav-link" href="Document_Conventions.html" role="tab" aria-selected="">Document
+                    Conventions</a>
+
+
+
+
+                <a class="nav-link active" href="#Description-Design-Components" role="tab" aria-selected="">Description
+                    of Design Components</a>
+
+
+
+                <a class="nav-link" href="High_Level_Component_Design.html" role="tab" aria-selected="">High-Level
+                    Component Design</a>
+
+
+                <a class="nav-link" href="Class_diagrams.html" role="tab" aria-selected="">Class diagrams</a>
+
+
+                <a class="nav-link" href="Database_Design.html" role="tab" aria-selected="">Database Design</a>
+
+
+                <a class="nav-link" href="Implementation_Plan.html" role="tab" aria-selected="">Implementation Plan</a>
+
+
+
+            </div>
+
+        </div>
+
+        <div class='k-main'>
+
+            <div class='k-main-top'>
+                <script>
+                    function displayDropdownMenu() {
+                        e = document.getElementById("nav-menu");
+                        if (e.style.display == "block") {
+                            e.style.display = "none";
+                        }
+                        else {
+                            e.style.display = "block";
+                            document.getElementById("dropdown-nav").style.display = "block";
+                        }
+                    }
+
+                    function resetMobileUI() {
+                        if (window.innerWidth <= 840) {
+                            document.getElementById("nav-menu").style.display = "none";
+                            document.getElementById("dropdown-nav").style.display = "block";
+                        }
+                        else {
+                            document.getElementById("nav-menu").style.display = "block";
+                            document.getElementById("dropdown-nav").style.display = "none";
+                        }
+                    }
+
+                    window.onresize = resetMobileUI;
+                </script>
+                <div id='dropdown-nav' onclick="displayDropdownMenu();">
+                    <svg viewBox="-20 -20 120 120" width="60" height="60">
+                        <rect width="100" height="20"></rect>
+                        <rect y="30" width="100" height="20"></rect>
+                        <rect y="60" width="100" height="20"></rect>
+                    </svg>
+                </div>
+
+            </div>
+            <div id='fixedbutton'><a class="headerlink btn btn-block btn-lg btn-primary"
+                    href='#Description-Design-Components'> Back to
+                    top </a></div>
+            <div class='k-main-inner'>
+                <div class='divHeader'><i>Software Design Specification for MenuWhiz</i> </div>
+                <div class='k-location-slug'>
+
+                    <h1 h1 id="Description-Design-Components"><a class="headerlink"
+                            href="#Description-Design-Components">Description of Design Components
+                        </a></h1>
+                </div>
+                <div class='k-content'>
+                    <p>In MenuWhiz our basic components are the database, the server-side and API, and the client-side
+                        (Android application for customer and Web interface for restaurants).
+
+                    </p>
+                    <br>
+                    <br>
+                    <h2 id="Database"><a class="headerlink" href="#Database"> ⦁ Database</a></h2>
+                    <p>
+                        One database will be used to store all the information regarding customers, restaurants, menu
+                        and order information. MySQL, a Relational Database Management System (RDBMS), will be used for
+                        this purpose.
+
+
+                    </p>
+                    <br>
+                    <br>
+                    <h2 id="Server-side-and-API"><a class="headerlink" href="#Server-side-and-API"> ⦁ Server-side and API
+                        </a></h2>
+                    <p>
+                        The backend or server-side of both of our android application and website will be the same. The
+                        backend will be designed using Django, a framework written using python. The backend will deal
+                        with activities such as user authentication, information retrieval from database, updating and
+                        writing information to database and processing information.<br>
+                        The android application and website interface will access the backend through an API. We will
+                        also use third party APIs such as Google Sign in, and NFC writer/reader to facilitate features
+                        of the product.
+
+                    </p>
+                    <br>
+                    <br>
+                    <h2 id="Client- Side"><a class="headerlink" href="#Client-Side"> ⦁ Client- Side</a></h2>
+                    <p>
+                        The client-side of our product has two interfaces, the android application and the web
+                        interface. The interfaces will be responsible for providing access to the features of our
+                        product, and executing the dynamic scripts which are variable from user to user.
+
+                    </p>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

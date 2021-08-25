@@ -1,0 +1,51 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+	{% if items.exists %}
+	
+		
+
+	
+	{% for Item in items %}
+    <div style="padding-bottom: 10px">
+	
+	<form method="POST">
+	{% csrf_token %}
+		<input type='text' name="id" value="{{Item.item_id}}" style="display:none"></input>
+		<i class="fas fa-dice-d6"></i>
+		<input type='text' name="name" value="{{Item.name}}" style="text-align:center; width: 170px; background-color: #F9E3F0; padding-right:15px" readonly=true>  </input>
+		
+		<b> Qty: </b><input type='text' name="quantity" value="{{Item.quantity}}" style="text-align:center; width: 50px; padding-right:15px" >  </input>
+		
+		<i class="fas fa-money-bill-wave"></i>
+		<input type='text' name="price" value="{{Item.price}}" style="text-align:center; padding-right:15px; width: 100px" >  </input>
+
+		<button type="submit" value ="update" name="_update" class="btn btn-info" >Update</button>
+		
+		<button type="submit" value="delete" name="_delete" class="btn btn-danger">Delete</button>
+	</form>
+	
+	</div>
+    <br>
+	{% endfor %}
+	
+	{% endif %}
+	
+	
+	<div class="row">
+		<div class="col">
+		</div>
+		<div class="col">
+
+			<button type="button submit" value="submit" class=" btn btn-outline-dark" style="width: 200px; height: 100px; border-color: #CB7575" onclick="location.href = '/additem'">Add Item</button>
+
+		</div>
+		<div class="col">
+		
+		</div>
+	</div>
+	
+ 
+{% endblock %}
+    

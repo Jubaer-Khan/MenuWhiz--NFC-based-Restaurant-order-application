@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title> System Features </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/docs.css" rel="stylesheet">
+
+    <!---Print stylesheel--->
+    <link href="css/print.css" rel="stylesheet" media="print">
+
+</head>
+
+<body>
+
+    <div class='k-page'>
+
+        <div class="k-nav" id="nav-menu">
+            <a href='../SRS.html'><img src='images/Logo.jpg' class='logo-small' /></a>
+
+            <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+
+
+                <a class="nav-link" href="page1.html" role="tab" aria-selected="">Software Requirements
+                    Specification</a>
+
+
+                <a class="nav-link" href="Introduction.html" role="tab" aria-selected="">Introduction</a>
+
+
+                <a class="nav-link" href="Overall_description.html" role="tab" aria-selected="">Overall Description</a>
+
+
+
+
+                <a class="nav-link" href="External_Interface_Requirements.html" role="tab" aria-selected="">External
+                    Interface Requirements</a>
+
+
+                <a class="nav-link active" href="#System-Features" role="tab" aria-selected="">System Features</a>
+
+                <a class="nav-sublink reference internal" href="#Functional-Requirements-Mobile">Functional Requirements
+                    of Mobile Application</a>
+                <a class="nav-sublink reference internal" href="#Functional-Requirements-Website">Functional
+                    Requirements of Website Interface</a>
+
+
+                <a class="nav-link" href="Other_Nonfunctional_Requirements.html" role="tab" aria-selected="">Other
+                    Nonfunctional Requirements</a>
+
+
+                <a class="nav-link" href="Other_Requirements.html" role="tab" aria-selected="">Other Requirements</a>
+
+
+                <a class="nav-link" href="Appendix_A.html" role="tab" aria-selected="">Appendix A: Glossary</a>
+
+
+                <a class="nav-link" href="Appendix_B.html" role="tab" aria-selected="">Appendix B: Analysis Models</a>
+
+
+                <a class="nav-link" href="Appendix_C.html" role="tab" aria-selected="">Appendix C: To Be Determined
+                    List</a>
+            </div>
+
+        </div>
+
+        <div class='k-main'>
+
+            <div class='k-main-top'>
+                <script>
+                    function displayDropdownMenu() {
+                        e = document.getElementById("nav-menu");
+                        if (e.style.display == "block") {
+                            e.style.display = "none";
+                        }
+                        else {
+                            e.style.display = "block";
+                            document.getElementById("dropdown-nav").style.display = "block";
+                        }
+                    }
+
+                    function resetMobileUI() {
+                        if (window.innerWidth <= 840) {
+                            document.getElementById("nav-menu").style.display = "none";
+                            document.getElementById("dropdown-nav").style.display = "block";
+                        }
+                        else {
+                            document.getElementById("nav-menu").style.display = "block";
+                            document.getElementById("dropdown-nav").style.display = "none";
+                        }
+                    }
+
+                    window.onresize = resetMobileUI;
+                </script>
+                <div id='dropdown-nav' onclick="displayDropdownMenu();">
+                    <svg viewBox="-20 -20 120 120" width="60" height="60">
+                        <rect width="100" height="20"></rect>
+                        <rect y="30" width="100" height="20"></rect>
+                        <rect y="60" width="100" height="20"></rect>
+                    </svg>
+                </div>
+
+            </div>
+
+            <div id='fixedbutton'><a class="headerlink btn btn-block btn-lg btn-primary" href='#System-Features'> Back
+                    to top </a></div>
+            <div class='k-main-inner'>
+                <div class='divHeader'><i>Software Requirements Specification for MenuWhiz</i> </div>
+                <div class='k-location-slug'>
+                    <h1 id="System-Features"><a class="headerlink" href="#System-Features">System Features </a></h1>
+                </div>
+
+                <div class='k-content'>
+                    <h2 id="Functional-Requirements-Mobile"><a class="headerlink"
+                            href="#Functional-Requirements-Mobile">4.1 Functional Requirements of Mobile Application
+                        </a></h2>
+                    <p>Actors present: Customer, Manager, System.</p>
+
+                    <h3 id="Registration"><a class="headerlink" href="#Registration">4.1.1 Registration</a></h3>
+                    <p>UCN: Customer Registration <br> ACTOR: Customer <br> UCT: Primary</p>
+
+                    <p><b>4.1.1.1 Description and Priority</b><br>Given that the user has downloaded the mobile
+                        application, the user is able to register to the platform using information such as email
+                        address, password etc. High priority.</p>
+                    <p><b>4.1.1.2 Stimulus/Response Sequences</b> 
+                    <table>
+                        <tr>
+                            <th class='actors'>Actor Actions</th>
+                            <th>System Responses</th>
+                        </tr>
+                        <tr>
+                            <td>Actor opens application</td>
+                            <td> <a href='images/main.png' target="_blank">First screen </a>with logo appears for 2 seconds, then proceeds to <a href='images/Log in page.png' target="_blank"> Sign up/Sign in screen </a>
+                            </td>
+                        </tr>
+                    </table>
+                    <p><b>Scenario 1: Actor presses “Continue with Google”</b></p>
+
+                    <table>
+                        <tr>
+                            <th class='actors'>Actor Actions</th>
+                            <th>System Responses</th>
+                        </tr>
+                        <tr>
+                            <td>Actor presses “Continue with Google” </td>
+                            <td>System responds with “Choose an account”  <a href='images/Choose account.png' target="_blank"> screen </a></td>
+                        </tr>
+                        <td>Actor chooses Google account</td>
+                        <td>
+                            System responds with interface showing either <a href='images/menu.png' target="_blank">  menu </a> of shop (if placed near a NFC tag) Or
+                            <a href='images/interface showing.png' target="_blank"> screen 2</a>, with the  message “Place phone near NFC tag to detect restaurant”</td>
+
+                    </table>
+                    <p><b>Scenario 2: Actor chooses to Sign up using email</b></p>
+                    <table>
+                        <tr>
+                            <th class='actors'>Actor Actions</th>
+                            <th>System Responses</th>
+                        </tr>
+                        <tr>
+                            <td>Actor fills out form and presses “Sign Up”</td>
+							<td>System responds with <a href='images/Sign Up.png' target="_blank"> screen 1 </a>, with form fields asking for name, email address, phone
+                            number, password, password verification and “Sign up” button </td>
+						</tr> 
+							<tr>
+                            <td>Actor presses “Sign Up”</td>
+                        <td>
+                            System responds with interface showing either <a href='images/menu.png' target="_blank">  menu </a> of shop (if placed near a NFC tag) Or
+                            screen 2, with the <a href='images/interface showing.png' target="_blank"> message </a>“Place phone near NFC tag to detect restaurant”</td></tr> 
+                    </table>
+
+                    Alternative course of events:<br>
+					• Error occurred due to invalid email address; will show <a href='images/Log_in_page_error.png' target="_blank"> error popup </a> “Invalid email address’<br>
+                    • Error occurred due to internet connectivity or database connection error; will show error
+                    popup “Registration Unsuccessful”<br>
+                    • Error occurred due to password and verification password not matching; will show error pop up
+                    “Enter password again”<br></p>
+                    <p></p><b>4.1.1.3 Functional Requirements</b>
+                    <br>REQ -1: Internet must be available
+                    <br>REQ-2: Database must be connected and online
+                    <br>REQ-3: Not currently signed in to the application
+                    </p>
+
+                    <br>
+                    <h3 id="existing-account"><a class="headerlink" href="#existing-account">4.1.2 Sign in to existing
+                            account</a></h3>
+                    <p>UCN: Customer Sign in<br>ACTOR: Customer<br>UCT: Primary</p>
+                    <p><b>4.1.2.1 Description and Priority</b><br>
+                        Given that the user has downloaded the mobile application, the user is able to sign in to his
+                        old account on the platform using information such as email address and password or Google sign
+                        in. High priority.</p>
+
+                    <p><b>4.1.2.2 Stimulus/Response Sequences</b><br>
+                        <b>Typical Course of events: </b>
+                    <Table>
+                        <tr>
+                            <th class='actors'>Actor Actions</th>
+                            <th>System Responses</th>
+                        </tr>
+                        <tr>
+                            <td>Actor opens application</td>
+                            <td><a href='images/main.png' target="_blank">First screen </a>with logo appears for 2 seconds, then proceeds to <a href='images/Log in page.png' target="_blank"> Sign up/Sign in screen </a>
+                            </td>
+                        </tr>
+                    </Table>
+                    <br>
+					<b>Scenario 1: Actor enters information into form fields</b>
+					<table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+					<tr>
+                            <td>Actor fills in the form and presses “Sign in”</td>
+                            <td>System responds with interface showing either <a href='images/menu.png' target="_blank">  menu </a> of shop (if placed near a NFC tag) Or
+                            screen 2, with the <a href='images/interface showing.png' target="_blank"> message </a>“Place phone near NFC tag to detect restaurant”</td>
+                        </tr>
+                    <table>
+                        <b>Scenario 2: Actor presses “Continue with Google”</b>
+                        <table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                            <tr>
+                                <td>Actor presses “Continue with Google”</td>
+                                <td>System responds with “Choose an account”  <a href='images/Choose account.png' target="_blank"> screen </a></td>
+                            </tr>
+                            <tr>
+                                <td>Actor chooses Google account </td>
+                                <td>System responds with interface showing either <a href='images/menu.png' target="_blank">  menu </a> of shop (if placed near a NFC tag) Or
+                            screen 2, with the <a href='images/interface showing.png' target="_blank"> message </a>“Place phone near NFC tag to detect restaurant”
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                        
+
+                        Alternative course of events:
+                        <br> • Error occurred due to internet connectivity or database connection error; will show error
+                        popup “Sign in Unsuccessful”
+                        <br> • Error occurred due to invalid email address and password combination; will show error
+                        <a href='images/Log_in_page_error.png' target="_blank"> error popup </a> “Invalid email or password”
+                        <p></p><b>4.1.2.3 Functional Requirements</b>
+                        <br>REQ -1: Internet must be available
+                        <br>REQ-2: Database must be connected and online
+                        <br>REQ-3: Not currently signed in to the application
+                        </p>
+                        <br>
+                        <h3 id="View-menu"><a class="headerlink" href="#View-menu">4.1.3 View menu</a></h3>
+                        <p>UCN: View menu as customer<br>ACTOR: Customer<br>UCT: Primary</p>
+                        <p><b>4.1.3.1 Description and Priority</b><br>
+                            After signing in or signing up, the user is able to view the menu of the restaurant by
+                            placing
+                            his phone near the NFC tag of the restaurant. High priority.
+                        </p> <b> 4.1.3.2 Stimulus/Response Sequences</b> <br>
+                        <b>Typical Course of events:</b>
+                        <table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                            <tr>
+                                <td>Actor opens application </td>
+                                <td><a href='images/main.png' target="_blank">First screen </a>with logo appears for 2 seconds</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <b>Scenario 1: Actor has placed his/her phone near the NFC tag</b>
+                        <table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                            <tr>
+                                <td>Actor places his phone near NFC tag</td>
+                                <td>System responds with interface showing<a href='images/menu.png' target="_blank">  menu </a> of the shop</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <b>cenario 2: Actor has not placed his/her phone near the NFC tag</b>
+                        <table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                            <tr>
+                                <td>Actor has not placed his/her phone near the NFC tag </td>
+                                <td>System responds with interface showing <a href='images/interface showing.png' target="_blank"> screen 2</a>, with the message “Place phone near
+                                    NFC tag to detect restaurant” </td>
+                            </tr>
+                            <tr>
+                                <td>Actor places his phone near NFC tag </td>
+                                <td>System responds with interface showing <a href='images/menu.png' target="_blank">  menu </a> of the shop </td>
+                            </tr>
+                        </table>
+
+                        Alternative course of events:<br>
+                        • Error occurred due to internet connectivity or database connection error; will show error
+                        popup
+                        “Cannot connect to database right now”</p>
+                        <p><b>4.1.3.3 Functional Requirements</b><br>
+                            REQ -1: Internet must be available<br>
+                            REQ-2: Database must be connected and online<br>
+                            REQ-3: NFC tag of shop has to be properly configured<br>
+                            REQ-4: Actor is signed into the application prior</p>
+                        <br>
+                        <h3 id="Order-Food"><a class="headerlink" href="#Order-Food">4.1.4 Order Food</a></h3>
+                        <p>UCN: Order Food<br>ACTOR: Customer<br>UCT: Primary</p>
+
+                        <p><b>4.1.4.1 Description and Priority</b><br>
+                            After viewing the menu, order food from the available items and see whether his order has
+                            been
+                            approved or not. High priority.
+                        </p> <b> 4.1.4.2 Stimulus/Response Sequences</b> <br>
+                        <b>Typical Course of events:</b>
+                        <table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                            <tr>
+                                <td>Actor opens application</td>
+                                <td><a href='images/main.png' target="_blank">First screen </a>with logo appears for 2 seconds </td>
+                            </tr>
+                        </table>
+                        <br>
+                        <b>Scenario 1: Actor has placed his/her phone near the NFC tag </b>
+                        <table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                            <tr>
+                                <td>Actor places his phone near NFC tag </td>
+                                <td>System responds with interface showing <a href='images/menu.png' target="_blank">  menu </a> of the shop </td>
+                            </tr>
+                            <tr>
+                                <td>Actor adds items from the menu using the “+” button beside items </td>
+                                <td>System responds by adding those items to his <a href='images/Cart.png' target="_blank">  order  list </a></td>
+                            </tr>
+                            <tr>
+                                <td>Actor presses “Place order” </td>
+                                <td>System responds by conveying the order to the restaurant website for approval</td>
+                            </tr>
+
+                        </table>
+                        <br>
+                        <b>Scenario 2: Actor has not placed his/her phone near the NFC tag </b>
+                        <table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                            <tr>
+                                <td>Actor has not placed his/her phone near the NFC tag </td>
+                                <td>System responds with interface showing <a href='images/interface showing.png' target="_blank"> screen 2 </a>, with the message “Place phone near
+                                    NFC tag to detect restaurant” </td>
+                            </tr>
+                            <tr>
+                                <td>Actor places his phone near NFC tag </td>
+                                <td>System responds with interface showing <a href='images/menu.png' target="_blank">  menu </a> of the shop </td>
+                            </tr>
+                            <tr>
+                                <td>Actor adds items from the menu using the “+” button beside items </td>
+                                <td>System responds by adding those items to his <a href='images/Cart.png' target="_blank">  order </a> list </td>
+                            </tr>
+                            <tr>
+                                <td>Actor presses “Place order” </td>
+                                <td>System responds by conveying the order to the restaurant website for approval </td>
+                            </tr>
+                        </table>
+                        Alternative course of events:<br>
+                        • Error occurred due to internet connectivity or database connection error; will show error
+                        popup
+                        “Cannot connect to database right now”
+                        <br>• Error occurred due to item going out of stock at that moment; will show error popup “Item
+                        unavailable”
+                        </p>
+                        <p><b>4.1.4.3 Functional Requirements</b><br>
+                            REQ -1: Internet must be available<br>
+                            REQ-2: Database must be connected and online<br>
+                            REQ-3: NFC tag of shop has to be properly configured<br>
+                            REQ-4: Actor is signed into the application prior </p>
+                        <br>
+
+                        <h3 id="Sign-out"><a class="headerlink" href="#Sign-out">4.1.5 Sign out</a></h3>
+                        <p>UCN: Sign out of account<br>ACTOR: Customer<br>UCT: Primary</p>
+                        <p><b>4.1.5.1 Description and Priority</b><br>To change users or to not stay logged in, the user
+                            can
+                            sign out of the app. High priority.</p>
+
+
+                        <p><b>4.1.5.2 Stimulus/Response Sequences</b>
+                            <b>Typical Course of events: </b>
+                        <table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                            <tr>
+                                <td>Actor opens application </td>
+                                <td><a href='images/main.png' target="_blank">First screen </a>with logo appears for 2 seconds followed by interface showing either
+                                    <a href='images/menu.png' target="_blank">  menu </a> of shop (if placed near a NFC tag) Or <a href='images/interface showing.png' target="_blank"> screen 2 </a>, with the message “Place phone
+                                    near NFC tag to detect restaurant”</td>
+                            </tr>
+                            <tr>
+                                <td>Actor presses “Sign out” button on navigation bar </td>
+                                <td>System responds by going back to <a href='images/Log in page.png' target="_blank"> Sign up/Sign in screen </a></td>
+                            </tr>
+                        </table>
+                        <p><b>4.1.5.3 Functional Requirements</b><br>
+                            REQ-1:Actor is signed into the application prior</p>
+                        <br>
+
+                        <h2 id="Functional-Requirements-Website"> <a class="headerlink"
+                                href="#Functional-Requirements-Website">4.2 Functional Requirements of Website Interface
+                            </a></h2>
+
+                        <p>Since our product is based on the usage of NFC tags, phones must be NFC enabled in order to
+                            use
+                            the application. Website users (restaurant managers) will have to accustom themselves to
+                            configuring NFC tags.</p>
+
+                        <br>
+                        <h3 id="O-Registration"><a class="headerlink" href="#O-Registration">4.2.1 Registration</a></h3>
+
+                        <p>UCN: Restaurant Registration <br> ACTOR: Manager <br> UCT: Primary</p>
+
+                        <p><b>4.2.1.1 Description and Priority</b><br>Given that the user has accessed the website, the
+                            user
+                            is able to register to the platform using information such as email address, password etc.
+                            High
+                            priority.
+                            <b>Typical Course of events:</b>
+                        <table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                            <tr>
+                                <td>Actor visits “www.menuwhiz.com”</td>
+                                <td>System responds with Sign up/Sign in <a href='images/Web_login.png' target="_blank"> screen </a> </td>
+                            </tr>
+                            <tr>
+                                <td>Actor presses on “Sign up” </td>
+                                <td>System responds with <a href='images/Web_sign_up.png'>screen 1</a>, with form fields asking for name, email address,
+                                    password, password verification and “Sign up” button, along with option for
+                                    “Continue with Google“ </td>
+                            </tr>
+
+                        </table>
+                        <br>
+                        <b>Scenario 1: Actor presses “Continue with Google” </b>
+                        <table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                            <tr>
+                                <td>Actor presses “Continue with Google” </td>
+                                <td>System responds with “Choose an account” <a href='images/Choose_account.png' target="_blank"> screen</a> </td>
+                            </tr>
+                            <tr>
+                                <td>Actor chooses Google account </td>
+                                <td>System responds with <a href='images/NFC_configuration.png' target="_blank"> interface </a> to configure NFC Tag </td>
+                            </tr>
+                            <tr>
+                                <td>Actor presses “Add NFC tag” </td>
+                                <td>System saves NFC tag unique ID to database and responds with interface to update
+                                    menu </td>
+                            </tr>
+                        </table>
+                        <br> 
+                        <b>Scenario 2: Actor enters information into form fields </b>
+                        <table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                            <tr>
+                                <td>Actor presses “Sign up” </td>
+                                <td>System responds with <a href='images/NFC_configuration.png' target="_blank"> interface </a> to configure NFC Tag </td>
+                            </tr>
+                            <tr>
+                                <td>Actor presses “Add NFC tag” </td>
+                                <td>System saves NFC tag unique ID to database and responds with interface to update
+                                    menu</td>
+                            </tr>
+                        </table>
+
+                        Alternative course of events:<br>
+                        • Error occurred due to internet connectivity or database connection error; will show error
+                        popup “Registration Unsuccessful”<br>
+                        • Error occurred due to invalid email address; will show error <a href='images/Web_login_error.png' target="_blank"> popup </a>“Invalid email
+                        address’<br>
+                        • Error occurred due to password and verification password not matching; will show error pop
+                        up
+                        “Enter password again”<br>
+                        • Error occurred due to invalid NFC tag; will show error popup “Invalid NFC ID”
+                        <br>
+                        </p>
+                        <p></p><b>4.2.1.2 Functional Requirements</b>
+                        <br>REQ -1: Internet must be available
+                        <br>REQ-2: Database must be connected and online
+                        <br>REQ-3: Not currently signed in to the website
+                        </p>
+                        <br>
+
+
+
+                        <h3 id="o-existing-account"><a class="headerlink" href="#o-existing-account">4.2.2 Sign in to
+                                existing account</a></h3>
+                        <p>UCN: Restaurant Sign in <br> ACTOR: Manager <br> UCT: Primary</p>
+
+                        <p><b>4.2.2.1 Description and Priority</b><br>Given that the user has accessed the website, the
+                            user
+                            is able to sign in to his old account on the platform using information such as email
+                            address
+                            and password or Google sign in. High priority. <br>
+                        </p>
+                        <p><b>4.2.2.2 Stimulus/Response Sequences</b> <br>
+                            <b>Typical Course of events :</b>
+                        <table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                            <tr>
+                                <td>Actor visits “www.menuwhiz.com” </td>
+                                <td>System responds with Sign up/Sign in <a href='images/Web_login.png' target="_blank"> screen </a> </td>
+                            </tr>
+                        </table>
+						
+						<b>Scenario 1: Actor enters information into form fields </b>
+                        <table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                            <tr>
+                                <td>Actor fills in the form and presses “Sign in” </td>
+                                <td>System responds with interface showing existing <a href='images/web_main_side.png' target="_blank">menu </a> and option to add items </td>
+                            </tr>
+                        </table>
+						
+                        <table>
+                            <b>Scenario 2: Actor presses “Continue with Google” </b>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                            <tr>
+                                <td>Actor presses “Continue with Google”</td>
+                                <td>System responds with “Choose an account” <a href='images/Choose_account.png' target="_blank"> screen</a>  </td>
+                            </tr>
+                            <tr>
+                                <td>Actor chooses Google account </td>
+                                <td> System responds with interface showing existing <a href='images/web_main_side.png' target="_blank">menu </a> and option to add items </td>
+                            </tr>
+
+                        </table>
+    
+                        <br>
+                        Alternative course of events:<br>
+                        • Error occurred due to internet connectivity or database connection error; will show error
+                        popup “Sign in Unsuccessful”<br>
+                        • Error occurred due to invalid email address and password combination; will show error
+                        popup
+                        “Invalid email or password”<br>
+
+                        </p>
+                        <p></p><b>4.2.2.3 Functional Requirements</b>
+                        <br>REQ -1: Internet must be available
+                        <br>REQ-2: Database must be connected and online
+                        <br>REQ-3: Not currently signed in to the website
+                        </p>
+                        <br>
+
+                        <h3 id="Add-items"><a class="headerlink" href="#Add-items">4.2.3 Add items</a></h3>
+                        <p>UCN: Add items to menu <br> ACTOR: Manager <br> UCT: Primary</p>
+
+                        <p><b>4.2.3.1 Description and Priority</b><br>Given that the user has signed in to the website,
+                            the
+                            user is able to add a new item to his/her menu. High priority.<br>
+                        </p>
+
+                        <p><b>4.2.3.2 Stimulus/Response Sequences</b> <br>
+                            <b>Typical Course of events: </b>
+                        <table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                            <tr>
+                                <td>Actor visits www.menuwhiz.com and signs in </td>
+                                <td>System responds with interface showing existing <a href='images/web_main_side.png' target="_blank">menu </a> and option to add items </td>
+                            </tr>
+                            <tr>
+                                <td>Actor presses on “Add item” </td>
+                                <td>System responds with <a href='Add_item.png' target="_blank"> screen 4 </a>, with form fields asking for name, price and quantity
+                                    of new item and “Add item” button“ </td>
+                            </tr>
+                            <tr>
+                                <td>Actor fills in the form fields and presses “Add items” </td>
+                                <td>System adds the item to the database and responds by going back to previous<a href='images/web_main_side.png' target="_blank"> screen </a>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <br>
+                        Alternative course of events:<br>
+                        • Error occurred due to internet connectivity or database connection error; will show error
+                        popup “Item addition Unsuccessful”
+
+                        <br>
+                        </p>
+                        <p></p><b>4.2.3.3 Functional Requirements</b>
+                        <br>REQ -1: Internet must be available
+                        <br>REQ-2: Database must be connected and online
+                        <br>REQ-3: Signed in to the website beforehand
+                        </p>
+                        <br>
+
+                        <h3 id="Update-items"><a class="headerlink" href="#Update-items">4.2.4 Update items</a></h3>
+
+                        <p>UCN: Add items to menu <br> ACTOR: Manager <br> UCT: Primary</p>
+
+                        <p><b>4.2.4.1 Description and Priority</b><br>Given that the user has signed in to the website,
+                            the
+                            user is able to update an existing item on his/her menu. High priority.<br>
+                        </p>
+
+                        <p><b>4.2.4.2 Stimulus/Response Sequences</b> <br>
+                            <b>Typical Course of events: </b>
+                        <table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                            <tr>
+                                <td>Actor visits www.menuwhiz.com and signs in </td>
+                                <td>system responds with interface showing existing <a href='images/web_main_side.png' target="_blank">menu </a> and option to add items </td>
+                            </tr>
+
+                        </table>
+                        <b>Scenario 1: Actor presses on “Update” beside the item he wants to update </b>
+                        <table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                            <tr>
+                                <td>Actor presses on “Update” icon beside the item he wants to update</td>
+                                <td>System responds with <a href='images/Update.png' target="_blank"> popup </a>, with form fields asking for new price and quantity of
+                                    new item and “Update” button“ </td>
+                            </tr>
+                            <tr>
+                                <td>Actor fills in the form fields and presses “Update” </td>
+                                <td>System adds the item to the database and responds by going back to previous <a href='images/web_main_side.png' target="_blank"> screen </a>
+                                </td>
+                            </tr>
+                        </table>
+                        <b>Scenario 2: Actor presses on “Delete” beside the item he wants to update </b>
+                        <table>
+                            <tr>
+                                <th class='actors'>Actor Actions</th>
+                                <th>System Responses</th>
+                            </tr>
+                           
+                            <tr>
+                                <td>Actor presses on “Delete” icon beside the item he wants to delete </td>
+                                <td>System responds by asking for confirmation via popup  </td>
+                            </tr>
+                            <tr>
+                                <td>Actor presses “confirm”  </td>
+                                <td>System responds by deleting the item and refreshing the <a href='images/web_main_side.png' target="_blank"> menu  </a></td>
+                            </tr>
+                        </table>
+
+                        <br>
+                        Alternative course of events:<br>
+                        • Error occurred due to internet connectivity or database connection error; will show error
+                        popup “Item update Unsuccessful”
+
+                        <br>
+                        </p>
+                        <p></p><b>4.2.4.3 Functional Requirements</b>
+                        <br>REQ -1: Internet must be available
+                        <br>REQ-2: Database must be connected and online
+                        <br>REQ-3: Signed in to the website beforehand
+                        </p>
+                        <br>
+
+                        <h3 id="Accept-Order"><a class="headerlink" href="#Accept-Order">4.2.5 Accept Order</a></h3>
+
+                        <p>UCN: Accept incoming order <br> ACTOR: Manager <br> UCT: Primary</p>
+
+                        <p><b>4.2.5.1 Description and Priority</b><br>Given that the user has signed in to the website,
+                            the
+                            user is able to add receive an order when it is placed and approve it upon payment. High
+                            priority.<br>
+                        </p>
+
+                        <p><b>4.2.5.2 Stimulus/Response Sequences</b> <br> 
+                            <b>Typical Course of events: </b>
+                            <table>
+                                <tr>
+                                    <th class='actors'>Actor Actions</th>
+                                    <th>System Responses</th>
+                                </tr>
+                               
+                                <tr>
+                                    <td>Actor visits www.menuwhiz.com and signs in </td>
+                                    <td>System responds with interface showing existing <a href='images/web_main_side.png' target="_blank">menu </a> and option to add items  </td>
+                                </tr>
+                                <tr>
+                                    <td>Actor receives<a href='images/new_order.png' target="_blank"> popup </a> showing new order  </td>
+                                    <td>System waits for response    </td>
+                                </tr>
+                                <tr>
+                                    <td>Actor presses “accept order” upon payment completion </td>
+                                    <td>System adds the order to the <a href='images/Current_list.png' target="_blank">current orders list </a> and returns to the previous screen </td>
+                                </tr>
+
+                            </table>
+                            <br> 
+                            Alternative course of events:<br>
+                            • Error occurred due to internet connectivity or database connection error; will show error
+                            popup “Order could not be confirmed”<br>
+                            • If payment not completed within 5 minutes, the popup closes by itself.
+                            <br>
+                        </p>
+                        <p></p><b>4.2.5.3 Functional Requirements</b>
+                        <br>REQ -1: Internet must be available
+                        <br>REQ-2: Database must be connected and online
+                        <br>REQ-3: Signed in to the website beforehand
+                        </p>
+                        <br>
+
+                        <h3 id="View-current-orders"><a class="headerlink" href="#View-current-orders">4.2.6 View list
+                                of
+                                current orders</a></h3>
+
+                        <p>UCN: View list of current order <br> ACTOR: Manager <br> UCT: Primary</p>
+
+                        <p><b>4.2.6.1 Description and Priority</b><br>Given that the user has signed in to the website,
+                            the
+                            user is able to view the current list of orders.<br>
+                        </p>
+
+                        <p><b>4.2.6.2 Stimulus/Response Sequences</b> <br>
+                            <b>Typical Course of events: </b>
+                            <table>
+                                <tr>
+                                    <th class='actors'>Actor Actions</th>
+                                    <th>System Responses</th>
+                                </tr>
+                               
+                                <tr>
+                                    <td>Actor visits www.menuwhiz.com and signs in </td>
+                                    <td>System responds with interface showing existing <a href='images/web_main_side.png' target="_blank">menu </a> and option to add items   </td>
+                                </tr>
+                                <tr>
+                                    <td>Actor clicks on “View current list of orders”  </td>
+                                    <td>System responds by showing screen containing details of <a href='images/Current_list.png' target="_blank">current list of orders </a> </td>
+                                </tr>
+                                
+
+                            </table>
+                            <br> 
+                            Alternative course of events:<br>
+                            • Error occurred due to internet connectivity or database connection error; will show error
+                            popup “Cannot be loaded right now”
+
+                            <br>
+                        </p>
+                        <p></p><b>4.2.6.3 Functional Requirements</b>
+                        <br>REQ -1: Internet must be available
+                        <br>REQ-2: Database must be connected and online
+                        <br>REQ-3: Signed in to the website beforehand
+                        </p>
+
+                        <br>
+
+                        <h3 id="O-Sign-out"><a class="headerlink" href="#O-Sign-out">4.2.7 Sign out</a></h3>
+
+                        <p>UCN: Sign out of account <br> ACTOR: Manager <br> UCT: Primary</p>
+
+                        <p><b>4.2.7.1 Description and Priority</b><br>To change users or to not stay logged in, the user
+                            can
+                            sign out of the website. High priority.
+
+                            <br>
+                        </p>
+
+                        <p><b>4.2.7.2 Stimulus/Response Sequences</b> <br> 
+                            <b>Typical Course of events: </b>
+                            <table>
+                                <tr>
+                                    <th class='actors'>Actor Actions</th>
+                                    <th>System Responses</th>
+                                </tr>
+                               
+                                <tr>
+                                    <td>Actor visits www.menuwhiz.com and signs in </td>
+                                    <td>System responds with interface showing existing <a href='images/web_main_side.png' target="_blank">menu </a> and option to add items </td>
+                                </tr>
+                                <tr>
+                                    <td>Actor presses “Sign out” button on <a href='images/Current_list.png' target="_blank">navigation bar </a></td>
+                                    <td>System responds by going back to Sign up/Sign in screen  </td>
+                                </tr>
+                                
+
+                            </table>
+
+
+                            <br>
+                        </p>
+                        <p></p><b>4.2.6.3 Functional Requirements</b>
+                        <br>REQ -1: Actor is signed into the application prior
+
+                        </p>
+
+
+
+                        <br>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

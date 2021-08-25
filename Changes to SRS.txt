@@ -1,0 +1,9 @@
+1. Google Sign in removed from website interface. Google does not provide an address whereas we need the address of a restaurant, hence it doesn't make sense to use Google Sign in there.
+
+2. vertical navbar of website moved to the left. could not manage to keep it in right side.
+
+3. changed the way NFC is configured. Original plan did not include instructions.
+
+4. "Add to cart" button added in restaurant menu, was missing in original design
+
+5. Delete item added in wesite, was not part originally. Update made simpler for user convenience.
